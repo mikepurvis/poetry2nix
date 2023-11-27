@@ -126,7 +126,7 @@ pythonPackages.callPackage
       ++ lib.optional (isLocked && (getManyLinuxDeps fileInfo.name).str != null) autoPatchelfHook
       ++ lib.optionals (format == "wheel") [
         pythonPackages.wheelUnpackHook
-        pythonPackages.pypaInstallHook
+        pythonPackages.pipInstallHook
       ]
       ++ lib.optionals (format == "pyproject") [
         hooks.removePathDependenciesHook

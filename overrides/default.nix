@@ -161,7 +161,7 @@ lib.composeManyExtensions [
       };
 
       wheel = bootstrappingBase.wheel.override {
-        inherit (self) buildPythonPackage flit-core;
+        inherit (self) buildPythonPackage setuptools;  # flit-core;
       };
       #### END bootstrapping pkgs
 
